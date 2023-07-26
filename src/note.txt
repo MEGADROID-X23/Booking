@@ -1,0 +1,50 @@
+import "./style.css";
+import { Fragment } from "react";
+
+function App(){
+
+    function handleClick(){
+        var date = new Date().toDateString();
+        alert(date);
+    }
+
+    function handleInput(e){
+        console.log(e.target.value); 
+    }
+
+    return(
+        
+        <Fragment>
+            <h1 style ={{backgroundColor: "red", color: "yellow", textAlign: "center"}}>Hello World</h1>
+            <h1 style={Internalstyle}>Hello World</h1>
+            <h1 className="test">Hello</h1>
+            <button id="btn" onClick={() => handleClick()}>click</button>
+            <input type="text" onChange={(e) => handleInput(e)} />
+        </Fragment>
+        
+    )
+}
+
+const Internalstyle = {
+    backgroundColor: "green",
+    textAlign: "center",
+    color: "purple",
+    fontWeight: "bold",
+    fontFamily: "Helvetica"
+}
+
+// function Test(){
+//     return(
+//         <strong>this is a strong text</strong>
+//     )
+// }
+
+// function Cart(){
+//     return(
+//         <h1>Your cart is empty!</h1>
+//     )
+// }
+
+//export default App
+
+export {App}
